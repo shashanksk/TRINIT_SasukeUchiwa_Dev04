@@ -1,31 +1,40 @@
+from itertools import dropwhile
 from lib2to3.pgen2 import driver
 import time
 from selenium import webdriver
 
 driver = webdriver.Chrome()
 
-driver.get('https://youtube.com')
+driver.get('https://outlook.com')
 
-time.sleep(7)
+signInButton = driver.find_element_by_xpath(
+    '/html/body/header/div/aside/div/nav/ul/li[2]/a')
 
-print("sleep done")
+signInButton.click()
 
-search_box = driver.find_element_by_xpath(
-    '/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input')
+emailBox = driver.find_element_by_xpath(
+    '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[3]/div/div/div/div[2]/div[2]/div/input[1]')
 
-# sleep(5)
-
-search_box.send_keys('221 ENIGMA')
-
-search_button = driver.find_element_by_xpath(
-    '/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/button')
-
-search_button.click()
+emailBox.send_keys('sasukeuchiwa0825@outlook.com')
 
 time.sleep(3)
 
-play_first = driver.find_element_by_xpath(
-    '/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]')
-play_first.click()
+nextButton = driver.find_element_by_xpath(
+    '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[3]/div/div/div/div[4]/div/div/div/div/input')
+nextButton.click()
+
+time.sleep(3)
+
+passwordBox = driver.find_element_by_xpath(
+    '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[3]/div/div[2]/input')
+passwordBox.send_keys('shennibinni69')
+
+nextButtonInpassword = driver.find_element_by_xpath(
+    '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[4]/div[2]/div/div/div/div/input')
+nextButtonInpassword.click()
+
+staySignedButton = driver.find_element_by_xpath(
+    '/html/body/div/form/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[1]/input')
+staySignedButton.click()
 
 print("no issues")
