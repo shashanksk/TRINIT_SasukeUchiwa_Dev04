@@ -107,9 +107,9 @@ createButtonForContact.click()
 
 print("\n\njust another second......\n\n")
 time.sleep(5)
-clickOnthebloodylinkedin = driver.find_element_by_xpath(
+clickOnthelinkedin = driver.find_element_by_xpath(
     '/html/body/div[3]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[2]/div/button[4]')
-clickOnthebloodylinkedin.click()
+clickOnthelinkedin.click()
 
 time.sleep(2)
 finalButtonToLinkedIn = driver.find_element_by_xpath(
