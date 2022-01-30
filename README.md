@@ -1,7 +1,12 @@
 # TRINIT_SasukeUchiwa_Dev04
 tri-nitk-hackathon repository for the linkedIn question
 
-## Approach--
+## TECHNOLOGIES USED
+-python
+-webparsing(selenium)
+-automation(chromedriver)
+
+## PROPOSED METHOD--
 
 We tried using the linked in api but the api returned a email for a profile ID not the other way around
 so we are using linkedIn's connection with the microsoft ecosystem
@@ -24,7 +29,11 @@ xattr -d com.apple.quarantine <name-of-executable>
   ```
   xattr -d com.apple.quarantine /opt/homebrew/bin/chromedriver
   ```
+  
+  
 # RUN trinitkhack.py
+
+## WORK DONE
 
 The program uses selenium to parse the website for elements and interact with the buttons
 
@@ -35,7 +44,7 @@ the input
 ENTER THE EMAIL-ADDRESS TO SEARCH THE PROFILE ::
 quattroz2432@gmail.com
 ```
-
+## RESULT
 After processing
 
 ```
@@ -51,3 +60,9 @@ linkedIn profile url::
 https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fsearch%2Fresults%2Fpeople%2F%3Fkeywords%3D09%253A04%253A05%26external_page%3DLPC%2EImmersive%26external_control%3DViewSearchResultsOnLinkedIn%26external_app_instance%3D78f0191d-bff8-40b4-8b09-b3c70405ae92%26external_page_instance%3D85ba0968-0a21-4d30-b46b-c19b1db83a26&trk=login_reg_redirect
 ```
 
+## drive link for the video explanation
+
+# [drive link](https://drive.google.com/drive/folders/1nTXhfSwR1w2QW8tNlCYaE1YFaTIMzzBx?usp=sharing)
+
+## ALTERNATE YOUTUBE LINK(same video)
+# [youtubeLink](https://youtu.be/3-xU-zouBrY)
