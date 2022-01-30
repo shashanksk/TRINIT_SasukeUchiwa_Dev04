@@ -8,11 +8,11 @@ brew install --cask chromedriver
 ```
 
 
---you need to grant permission to run automated chromedriver scripts--
+you need to grant permission to run automated chromedriver scripts
 ```
 xattr -d com.apple.quarantine <name-of-executable> 
 ```
-<name-of-executible> is the file path of the chromedriver
+"<name-of-executible>" is the file path of the chromedriver
   eg:-
   ```
   xattr -d com.apple.quarantine /opt/homebrew/bin/chromedriver
