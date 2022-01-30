@@ -7,7 +7,8 @@ pip install selenium
 brew install --cask chromedriver
 ```
 
-**you need to grant permission to run automated chromedriver scripts
+
+--you need to grant permission to run automated chromedriver scripts--
 ```
 xattr -d com.apple.quarantine <name-of-executable> 
 ```
