@@ -1,7 +1,12 @@
 # TRINIT_SasukeUchiwa_Dev04
 tri-nitk-hackathon repository for the linkedIn question
 
-we are using a automated scripts to go to outlook and get the url
+## Approach--
+
+We tried using the linked in api but the api returned a email for a profile ID not the other way around
+so we are using linkedIn's connection with the microsoft ecosystem
+we are using a automated scripts that logs into outlook, creates a contact with the email provided and 
+returns the linked url 
 
 ## install components 
 ```bash
