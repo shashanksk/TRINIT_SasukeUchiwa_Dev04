@@ -5,6 +5,10 @@ from lib2to3.pgen2 import driver
 import time
 from selenium import webdriver
 from datetime import datetime
+# for implicit and explict waits
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.options import Options  # for suppressing the browser
+
 
 now = datetime.now()
 
@@ -15,6 +19,14 @@ print("ENTER THE EMAIL-ADDRESS TO SEARCH THE PROFILE ::")
 email = input()
 
 driver = webdriver.Chrome()
+
+chrome_options = Options()
+chrome_options.add_argument("--disable-extensions")
+chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("start-maximized")
+chrome_options.add_argument("--disable-notifications")
+chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+chrome_options.add_argument("--headless")
 
 driver.get('https://outlook.com')
 
@@ -125,6 +137,21 @@ finalButtonToLinkedIn.click()
 
 time.sleep(10)
 
-print(driver.current_window_handles)
+# get current window handle
+p = driver.current_window_handle
 
-print('done')
+# get first child window
+chwd = driver.window_handles
+
+for w in chwd:
+    # switch focus to child window
+    if(w != p):
+        driver.switch_to.window(w)
+
+print("\n\n\n\nlinkedIn profile url::")
+
+print(driver.current_url)
+print('\n\ndone')
+
+driver.close()
+driver.quit()
