@@ -18,6 +18,8 @@ current_time = now.strftime("%H:%M:%S")
 print("ENTER THE EMAIL-ADDRESS TO SEARCH THE PROFILE ::")
 email = input()
 
+print("\n\n\n\n")
+
 driver = webdriver.Chrome()
 
 chrome_options = Options()
@@ -35,18 +37,19 @@ signInButton = driver.find_element_by_xpath(
 
 signInButton.click()
 
+# to put the email for login
 emailBox = driver.find_element_by_xpath(
     '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[3]/div/div/div/div[2]/div[2]/div/input[1]')
 
 emailBox.send_keys('sasukeuchiwa0825@outlook.com')
 
-time.sleep(3)
+time.sleep(2)
 
 nextButton = driver.find_element_by_xpath(
     '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[3]/div/div/div/div[4]/div/div/div/div/input')
 nextButton.click()
 
-time.sleep(3)
+time.sleep(2)
 
 passwordBox = driver.find_element_by_xpath(
     '/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[3]/div/div[2]/input')
@@ -67,31 +70,10 @@ clickOntheContactsbutton = driver.find_element_by_xpath(
 clickOntheContactsbutton.click()
 
 
-time.sleep(8)
-
-# newContactButton = driver.find_element_by_xpath(
-#     '//*[@id="app"]/div/div[2]/div[2]/div[1]/div/div/div/div/div/div[1]/div[2]/div/div/div/span/button[1]')
-# newContactButton.click()
-# newContactButton.click()
-# newContactButton.click()
-# newContactButton.click()
-
-# DeleteExistingContact = driver.find_element_by_xpath(
-#     '/html/body/div[3]/div/div[2]/div[2]/div[1]/div/div/div/div/div/div[1]/div[5]/button/span')
-# DeleteExistingContact.click()
-# time.sleep(10)
-
-# deleteConfirmation = driver.find_element_by_xpath(
-#     '/html/body/div[8]/div/div/div/div[2]/div[2]/div/div[2]/div[2]/div/span[1]/button/span')
-# deleteConfirmation.click()
-
-# full x path /html/body/div[8]/div/div/div/div[2]/div[2]/div/div[2]/div[2]/div/span[1]/button
+# time.sleep(8)
 
 time.sleep(10)
 
-# this is to test the button be aware
-# newContactButton = driver.find_element_by_xpath(
-#     '/html/body/div[3]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[1]/div/div/div/ul/li[2]/ul/button[1]')
 
 newContactButton = driver.find_element_by_xpath(
     '/html/body/div[3]/div/div[2]/div[2]/div[1]/div/div/div/div/div/div[1]/div[2]/div/div/div/span/button[1]')
@@ -100,9 +82,7 @@ newContactButton = driver.find_element_by_xpath(
 newContactButton.click()
 
 time.sleep(6)
-# addNewContactButton = driver.find_element_by_xpath(
-#     '/html/body/div[3]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/button[1]')
-# addNewContactButton.click()
+
 
 time.sleep(3)
 firstNameBox = driver.find_element_by_xpath(
