@@ -9,7 +9,6 @@ from datetime import datetime
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options  # for suppressing the browser
 
-
 now = datetime.now()
 
 current_time = now.strftime("%H:%M:%S")
@@ -22,13 +21,7 @@ print("\n\n\n\n")
 
 driver = webdriver.Chrome()
 
-chrome_options = Options()
-chrome_options.add_argument("--disable-extensions")
-chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument("start-maximized")
-chrome_options.add_argument("--disable-notifications")
-chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-chrome_options.add_argument("--headless")
+driver.set_window_position(-30000, 0)
 
 driver.get('https://outlook.com')
 
@@ -43,6 +36,7 @@ emailBox = driver.find_element_by_xpath(
 
 emailBox.send_keys('sasukeuchiwa0825@outlook.com')
 
+print("\n\nprogram has begun... loading elements\n\n")
 time.sleep(2)
 
 nextButton = driver.find_element_by_xpath(
@@ -63,7 +57,8 @@ staySignedButton = driver.find_element_by_xpath(
     '/html/body/div/form/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[1]/input')
 staySignedButton.click()
 
-time.sleep(2)
+print("\n\nfun fact while you wait for the webpage to load \n\n:: The oldest person ever to have lived (whose age could be authenticated), a French woman named Jeanne Louise Calment, was 122 years old when she died in 1997.\n\n")
+time.sleep(9)
 
 clickOntheContactsbutton = driver.find_element_by_xpath(
     '/html/body/div[3]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[3]/div/button')
@@ -71,8 +66,10 @@ clickOntheContactsbutton.click()
 
 
 # time.sleep(8)
-
-time.sleep(10)
+print("\n\n Almost there................")
+for i in range(1, 20):
+    time.sleep(0.5)
+    print(i)
 
 
 newContactButton = driver.find_element_by_xpath(
@@ -81,6 +78,8 @@ newContactButton = driver.find_element_by_xpath(
 
 newContactButton.click()
 
+
+print("\n\n Another fun fact::\n\nThe oldest-known living land animal is a tortoise named Jonathan, who is 187 years old. He was born in 1832 and has lived on the island of St. Helena in the Atlantic Ocean since 1882.\n\n")
 time.sleep(6)
 
 
@@ -105,6 +104,8 @@ createButtonForContact = driver.find_element_by_xpath(
     '/html/body/div[8]/div/div/div/div[2]/div[2]/main/section[2]/div[2]/div/button[1]')
 createButtonForContact.click()
 
+
+print("\n\njust another second......\n\n")
 time.sleep(5)
 clickOnthebloodylinkedin = driver.find_element_by_xpath(
     '/html/body/div[3]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[2]/div/button[4]')
@@ -115,7 +116,7 @@ finalButtonToLinkedIn = driver.find_element_by_xpath(
     '/html/body/div[3]/div/div[2]/div[2]/div[2]/div[2]/div/div/div[2]/div[3]/div/div/div/div/div[2]/section/div[2]/button')
 finalButtonToLinkedIn.click()
 
-time.sleep(10)
+time.sleep(5)
 
 # get current window handle
 p = driver.current_window_handle
@@ -132,6 +133,9 @@ print("\n\n\n\nlinkedIn profile url::")
 
 print(driver.current_url)
 print('\n\ndone')
+
+print("\n\npress any key to close")
+input()
 
 driver.close()
 driver.quit()
