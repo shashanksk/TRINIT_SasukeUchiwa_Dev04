@@ -31,7 +31,7 @@ xattr -d com.apple.quarantine <name-of-executable>
   ```
   
   
-# RUN trinitkhack.py
+# RUN trinithack.py
 
 ## WORK DONE
 
@@ -62,7 +62,18 @@ https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2El
 
 ## drive link for the video explanation
 
-# [drive link](https://drive.google.com/drive/folders/1nTXhfSwR1w2QW8tNlCYaE1YFaTIMzzBx?usp=sharing)
+# [drive link](https://drive.google.com/drive/folders/1nTXhfSwR1w2QW8tNlCYaE1YFaTIMzzBx?usp=sharing)📀
 
 ## ALTERNATE YOUTUBE LINK(same video)
-# [youtubeLink](https://youtu.be/3-xU-zouBrY)
+# [youtubeLink](https://youtu.be/3-xU-zouBrY)📀
+
+# conclusion 
+
+### this hackathon was a quite challenging one as it is the first online hackathon and peer interaction was limited
+### coming to the problem statement, it was quite complex and seemed pretty easy at the beginning but as the saying goes 
+### the simple ones are the hardest ones
+### - we tried using api calls but getting the right api was challenging as linkedIn didnt guarantee the return of userID via email
+### - using the microsoft suit api -graph opened a whole world of issues as the documentation was not easy to interpret 
+### - so we settled with the idea of automating the outlook website
+### - this implementation is not perfect because of the time delays but does yeild the neccesary results
+### - anyways the challenge was amazing and we had a great time tackling it✌️
